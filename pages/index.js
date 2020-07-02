@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { GlobalStyles } from '../components/GlobalStyles';
 import fDB from '../lib/firebase';
 import { useUx } from '../hooks/ux';
@@ -30,7 +30,6 @@ const App = ({ firebaseData }) => {
 
 App.getInitialProps = async () => {
   const snap = await fDB.collection('posts').orderBy('date', 'desc').get();
-
   const dataArr = [];
   snap.forEach((doc) => dataArr.push({ ...doc.data(), id: doc.id }));
   return { firebaseData: dataArr };
