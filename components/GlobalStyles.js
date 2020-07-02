@@ -86,6 +86,12 @@ export const GlobalStyles = () => {
           margin: auto;
           box-sizing: border-box;
         }
+        .404 {
+          padding: 10px;
+          background-color: background-color: rgba(0, 0, 0, 1);
+          color: white;
+          font-size: 36px;
+        }
       `}
     </style>
   );
