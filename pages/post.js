@@ -4,7 +4,7 @@ import fDB from '../lib/firebase';
 import Head from 'next/head';
 import { PTMHead } from '../components/PTMHead';
 import { PTMNav } from '../components/PTMNav';
-import { FourOhFour } from './404';
+import FourOhFour from './404';
 
 const Post = ({ title, body, img }) =>
   title && body && img ? (
