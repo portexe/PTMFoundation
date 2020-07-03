@@ -9,6 +9,7 @@ import FourOhFour from './404';
 const Post = ({ title, body, img }) =>
   title && body && img ? (
     <>
+    {console.log(title, body, img)}
       <PTMHead title={title} body={body} img={img} />
       <PTMNav />
       <div id='lonely-post'>
@@ -28,7 +29,6 @@ Post.getInitialProps = async ({ query }) => {
   const { postid: id } = query;
   if (id) {
     const doc = await fDB.collection('posts').doc(id).get();
-
     return { ...doc.data(), id };
   } else {
     return { title: '', img: '', id: '', body: '' };

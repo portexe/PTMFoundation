@@ -14,16 +14,22 @@ const App = ({ firebaseData }) => {
     <>
       <PTMHead title='PTM Foundation' body='Racism is for choads' img='https://i.imgur.com/D7TP0kA.jpg' />
       <PTMNav />
-      <div id='feed' className='feed'>
-        {firebaseData.map((post, index) => (
-          <div onClick={() => router.push(`/post?postid=${post.id}`)} key={index} className='post'>
-            <img src={post.img} alt='post' />
-            <h1>{post.title}</h1>
-            <p>{post.body}</p>
+      {firebaseData.length > 0 ? (
+        <>
+          <div id='feed' className='feed'>
+            {firebaseData.map((post, index) => (
+              <div onClick={() => router.push(`/post?postid=${post.id}`)} key={index} className='post'>
+                <img src={post.img} alt='post' />
+                <h1>{post.title}</h1>
+                <p>{post.body}</p>
+              </div>
+            ))}
           </div>
-        ))}
-        <GlobalStyles />
-      </div>
+        </>
+      ) : (
+        <div className='not-found'>Sorry there's nothing here yet. Check back soon!</div>
+      )}
+      <GlobalStyles />
     </>
   );
 };

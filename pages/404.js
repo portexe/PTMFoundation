@@ -8,7 +8,7 @@ const FourOhFour = () => {
     <>
       <PTMHead title='' body='' img='' />
       <PTMNav />
-      <div className='404'>Unfortunately this page does not exist :(</div>
+      <div className='not-found'>Unfortunately this page does not exist :(</div>
       <GlobalStyles />
     </>
   );

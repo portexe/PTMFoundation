@@ -20,7 +20,7 @@ export const GlobalStyles = () => {
           padding-bottom: 15px;
           text-align: right;
           position: fixed;
-          top: 10px;
+          top: 0px;
           right: 0px;
           background-color: white;
           border-radius: 0 0 0 15px;
@@ -32,6 +32,7 @@ export const GlobalStyles = () => {
         }
         .feed {
           display: inline-block;
+          margin-top: 100px;
         }
         .post img,
         .post video {
@@ -86,11 +87,14 @@ export const GlobalStyles = () => {
           margin: auto;
           box-sizing: border-box;
         }
-        .404 {
+        .not-found {
           padding: 10px;
-          background-color: background-color: rgba(0, 0, 0, 1);
+          background-color: rgba(0, 0, 0, 1);
           color: white;
           font-size: 36px;
+          width: 100%;
+          text-align: center;
+          margin-top: 100px;
         }
       `}
     </style>
