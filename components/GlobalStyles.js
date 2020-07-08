@@ -39,8 +39,6 @@ export const GlobalStyles = () => {
           max-width: 100%;
           display: block;
           margin: 0 auto;
-        }
-        .feed .post:hover {
           cursor: pointer;
         }
         .post {
@@ -57,10 +55,18 @@ export const GlobalStyles = () => {
         .post p {
           background-color: rgba(0, 0, 0, 1);
         }
+        .post p a {
+          color: #ff3838;
+        }
+        .post p a:hover {
+          color: #4d58ff;
+        }
         .post h1 {
           background-color: rgba(0, 0, 0, 1);
           font-size: 24px;
+          cursor: pointer;
         }
+
         .loading {
           font-size: 50px;
           background-color: black;

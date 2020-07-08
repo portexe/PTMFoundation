@@ -6,7 +6,8 @@
     "firebase": "^7.15.5",
     "next": "^9.4.4",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "react-linkify": "^1.0.0-alpha"
   },
   "scripts": {
     "dev": "next dev",

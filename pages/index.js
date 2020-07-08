@@ -5,6 +5,7 @@ import { useUx } from '../hooks/ux';
 import { useRouter, withRouter } from 'next/router';
 import { PTMHead } from '../components/PTMHead';
 import { PTMNav } from '../components/PTMNav';
+import Linkify from 'react-linkify';
 
 const App = ({ firebaseData }) => {
   useUx();
@@ -18,10 +19,12 @@ const App = ({ firebaseData }) => {
         <>
           <div id='feed' className='feed'>
             {firebaseData.map((post, index) => (
-              <div onClick={() => router.push(`/post?postid=${post.id}`)} key={index} className='post'>
-                <img src={post.img} alt='post' />
-                <h1>{post.title}</h1>
-                <p>{post.body}</p>
+              <div key={index} className='post'>
+                <img onClick={() => router.push(`/post?postid=${post.id}`)} src={post.img} alt='post' />
+                <h1 onClick={() => router.push(`/post?postid=${post.id}`)}>{post.title}</h1>
+                <Linkify>
+                  <p>{post.body}</p>
+                </Linkify>
               </div>
             ))}
           </div>
